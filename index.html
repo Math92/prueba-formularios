@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario-Login</title>
+</head>
+<body>
+    <header>
+        <div class="top-header">
+            <p>20% de descuento en todos los productos!</p>
+        </div>
+        <div class="main-header">
+            <div>
+                <img src="/img/Logo.png" alt="logo">
+            </div>
+            <div>
+                <h1>Heroes Design</h1>
+            </div>
+        </div>
+        <div class="foot-header">
+            <nav>
+                <a href="#">Contacto</a>
+                <a href="#">Registarme</a>
+                <a href="#">Ingresar</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <form action="/registro/registro.txt" method="POST">
+            <div class="agregar">
+                <h2>Añadí tu super!</h2>
+                <p>Agregá tu personaje favorito completando las opciones.</p>
+            </div>
+            <div class="datos">
+                <div class="container-name">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ej:Marcos" class="campos">
+                </div>
+                <div class="container-name">
+                    <label for="especie">Especie</label>
+                    <select name="especies" id="especies" class="campos">
+                        <option value="humano">Humano</option>
+                        <option value="alienigena">Alienígena</option>
+                        <option value="androide">Androide</option>
+                        <option value="mutante">Mutante</option>
+                        <option value="robot">Robot</option>
+                        <option value="animal">Animal Antropomórfico</option>
+                        <option value="desconocido" selected>Desconocido</option>
+                    </select>
+                </div>
+            </div>
+            <div class="fecha-file">
+                <div class="fecha">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" min="1900-01-01" max="2020-12-31" value="1900-01-02" class="campos">
+                </div>
+                <div class="file">
+                    <label for="archivo">Agregar foto:</label>
+                    <input type="file" id="archivo" name="archivo" placeholder="Seleccionar archivo" class="campo-file">
+                </div>
+            </div>
+            <div class="container-textarea">
+                <div>
+                    <textarea id="comenatrio" name="comentario" class="area-comentario"></textarea>
+                </div>
+                <div class="container-radiobutton">
+                    <div class="poder-tipo">
+                        <label class="poder-tipo-label">Poderes:</label>
+                        <input type="checkbox" id="volar" name="poderes" value="volar">
+                        <label for="volar">Volar</label>
+                        
+                        <input type="checkbox" id="inteligencia" name="poderes" value="inteligencia">
+                        <label for="inteligencia">Super Inteligencia</label>
+                        
+                        <input type="checkbox" id="rayo-laser" name="poderes" value="rayo-laser">
+                        <label for="rayo-laser">Vista de Rayo Láser</label>
+                        
+                        <input type="checkbox" id="billetera" name="poderes" value="billetera">
+                        <label for="billetera">Billetera Gorda</label>
+                        
+                        <input type="checkbox" id="super-fuerza" name="poderes" value="super-fuerza">
+                        <label for="super-fuerza">Super Fuerza</label>
+                    </div>
+                    <div class="poder-tipo">
+                        <label class="poder-tipo-label">Tipo de Heroe:</label>
+                        <input type="radio" id="heroe" name="tipo" value="heroe" checked>
+                        <label for="heroe">Héroe/heroína</label>
+                        
+                        <input type="radio" id="villano" name="tipo" value="villano">
+                        <label for="villano">Villano/villana</label>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <button style="background-color: transparent; border: none;">
+                    <input type="submit" value="Añadir" class="input" >
+                </button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>Todos los derechos reservados a FRONT END 1</p>
+    </footer>
+</body>
+</html>
